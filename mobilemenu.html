@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>My Mobile Menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--LOGO, MENU-->
+    <nav>
+        <ol>
+            <img src="images/Logo.png" alt="" class="logo">
+            <h1>CODE-DE-SAC <br> The Web Neighborhood</h1>
+
+            <img src="images/MenuOpenBar.png" alt="" id="menuOpen" onclick="dropMenu()">
+            <img src="images/MenuCloseBar.png" alt="" id="menuClose" onclick="closeMenu()">
+        </ol>
+    </nav>
+
+    <ul id="mobile">
+        <li><a href="">Home</a></li>
+        <li><a href="#sect2">Services</a></li>
+        <li><a href="">About</a></li>
+    </ul>
+
+    <!--SECTION ONE-->
+    <div id="sect1">
+        <h1>WELCOME TO THE <br> WEB NEIGHBORHOOD</h1>
+        <p>Get a personalized website for your business <br>or personal needs</p>
+        <input type="button" value="Pick a Plan"></input>
+    </div>
+
+    <div id="sect2"> <!--SERVICES-->
+        <div class="plans">
+            <div class="plan1">
+                <h1>BASIC WEB</h1>
+                <p>
+                    Basic web, not animations. Minimal amenities <br>
+                    Basic web, not animations. Minimal amenities <br>
+                    Basic web, not animations. Minimal amenities
+                </p>
+            </div>
+            <div class="plan2">
+                <h1>ADVANCE WEB</h1>
+                <p>
+                    Comes with the basics. Includes adavanced animations <br>
+                    Comes with the basics. Includes adavanced animations <br>
+                    Comes with the basics. Includes adavanced animations
+                </p>
+            </div>
+            <div class="plan3">
+                <h1>MORE ADDITIONS</h1>
+                <p>
+                    Way mroe than the basic and advance. Go all out! <br>
+                    Way mroe than the basic and advance. Go all out! <br>
+                    Way mroe than the basic and advance. Go all out!
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!--
+        
+    <div id="sect3">
+        <div class="aboutSect">
+            <div class="aboutH">
+                <h1>What is the Code-De-Sac?</h1>
+                <img src="" alt="">
+            </div>
+        </div>
+    </div>
+    -->
+    <script>
+        //JavaScript to open the moblie menu
+        function dropMenu() {
+            //Shows the menu once the open icon is clicked
+            document.getElementById("mobile").style.display = "block";
+            document.getElementById("mobile").style.animation = "fadeIn 1s";
+            //hides the open menu icon
+            document.getElementById("menuOpen").style.display = "none";
+            //displays the close menu icon
+            document.getElementById("menuClose").style.display = "block";
+            document.getElementById("menuClose").style.animation = "fadeIn 1s";
+
+        }
+        //JavaScript to close the mobile menu
+        function closeMenu() {
+            //Closes the menu once the close icon is clicked
+            document.getElementById("mobile").style.display = "none";
+            //hides the open menu icon
+            document.getElementById("menuOpen").style.display = "block";
+            //displays the close menu icon
+            document.getElementById("menuClose").style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
